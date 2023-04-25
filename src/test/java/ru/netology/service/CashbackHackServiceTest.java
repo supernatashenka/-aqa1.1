@@ -27,7 +27,16 @@ public class CashbackHackServiceTest {
 
     }
 
+    @Test
+    public void ShouldRemain0IfAmountIs1000() {
 
+        CashbackHackService service = new CashbackHackService();
+
+        int actual = service.remain(1000);
+        int expected = 0;
+        assertEquals(actual,expected);
+
+    }
     @Test
     public void ShouldRemain999IfAmountIs1001() {
 
